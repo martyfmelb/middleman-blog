@@ -1,0 +1,19 @@
+html {
+  font-size: theme($tk-root-font-size-px);
+}
+body {
+  font-family: theme($tk-base-font-stack);
+  font-size: rem(theme($tk-base-font-size-px));
+  background: theme($tk-base-background);
+  color: theme($tk-base-color);
+}
+
+.u-padded-sides {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media($neat-breakpoint-xsmall-or-below) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

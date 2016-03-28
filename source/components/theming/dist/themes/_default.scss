@@ -1,0 +1,25 @@
+$theme-accent-primary-color: #336699;
+
+$theme-default: (
+  $tk-root-font-size-px: 16px,
+  $tk-base-font-size-px: 12px,
+  $tk-base-font-stack: $helvetica,
+  $tk-base-background: #FFFFFF,
+  $tk-base-color: #333333,
+  $tk-base-color-light: #808080,
+  $tk-base-color-lighter: #C0C0C0,
+  $tk-base-color-lightest: #E0E0E0,
+  $tk-accent-primary-color: $theme-accent-primary-color,
+  $tk-accent-secondary-color: #88FF88,
+  $tk-cms-heading-font-stack: $georgia,
+  $tk-cms-heading-color: #666666,
+  $tk-cms-font-stack: $georgia,
+  $tk-cms-font-size-px: 14px,
+  $tk-cms-font-size-small-px: 10px,
+  $tk-cms-h1-font-size-px: 36px,
+  $tk-cms-h2-font-size-px: 24px,
+  $tk-cms-h3-font-size-px: 18px,
+  $tk-cms-h4-font-size-px: 16px,
+  $tk-cms-h5-font-size-px: 14px,
+  $tk-cms-h6-font-size-px: 12px
+);

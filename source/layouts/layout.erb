@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+
+    <%= stylesheet_link_tag 'bundles/site.css' %>
+
+    <% current_page.data.css && current_page.data.css.each do |css| %>
+      <%= stylesheet_link_tag css %>
+    <% end %>
+
+    <%= javascript_include_tag 'bundles/site.js' %>
+
+    <% current_page.data.head_js && current_page.data.head_js.each do |js| %>
+      <%= javascript_include_tag js %>
+    <% end %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div class="o-outer-container">
+      <%= yield %>
+    </div>
+    <% current_page.data.js && current_page.data.js.each do |js| %>
+      <%= javascript_include_tag js %>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+body {
+  &:before {
+    position: fixed;
+    display: block;
+    right: 0;
+    top: 0;
+    padding: 5px;
+
+    background: #FFFFFF;
+    color: #000000;
+    font-size: rem(12px);
+
+    @include media($neat-breakpoint-xsmall-or-below) { content: 'xsmall'; }
+    @include media($neat-breakpoint-small-only) { content: 'small'; }
+    @include media($neat-breakpoint-medium-only) { content: 'medium'; }
+    @include media($neat-breakpoint-large-only) { content: 'large'; }
+    @include media($neat-breakpoint-xlarge-or-above) { content: 'xlarge'; }
+  }
+}

@@ -1,0 +1,312 @@
+---
+layout: component-test
+title: grid-equal-cols - SASS Layout Objects
+css:
+- test.css
+---
+<h1><code>o-grid-equal-cols--N-cols</code> (fixed column count)</h1>
+<p>Column count is set manually, to allow multiple rows without extra containers.</p>
+<p><code>--with-row-gutters</code> is set for all of these test grids.</p>
+
+
+<h2><code>--N-cols-for-[media]</code></h2>
+<p>Covers entire media space: xsmall-or-below, small, medium, large, xlarge-or-above.</p>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--2-cols-for-xsmall-or-below
+              o-grid-equal-cols--3-cols-for-small
+              o-grid-equal-cols--4-cols-for-medium
+              o-grid-equal-cols--5-cols-for-large
+              o-grid-equal-cols--6-cols-for-xlarge-or-above
+              ">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2><code>--N-cols-for-small-or-above</code></h2>
+<h3><code>--2-cols-for-small-or-above</code></h3>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--2-cols-for-small-or-above">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h3><code>--3-cols-for-small-or-above</code></h3>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--3-cols-for-small-or-above">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2><code>--N-cols-for-medium-or-above</code></h2>
+<h3><code>--4-cols-for-medium-or-above</code></h3>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--4-cols-for-medium-or-above">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h3><code>--5-cols-for-medium-or-above</code></h3>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--5-cols-for-medium-or-above">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2><code>--N-cols-for-large-or-above</code></h2>
+<h3><code>--6-cols-for-large-or-above</code></h3>
+<div class="o-test-container">
+  <div class="o-grid-equal-cols
+              o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--6-cols-for-large-or-above">
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+    <div class="o-grid-equal-cols__cell">
+      <div class="o-test-content s-cms">
+        <%= partial "../common/partials/latin-paragraph" %>
+      </div>
+    </div>
+  </div>
+</div>

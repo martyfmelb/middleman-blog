@@ -1,0 +1,33 @@
+.s-cms {
+  color: theme($tk-base-color);
+
+  font-family: theme($tk-cms-font-stack);
+  font-size: rem(theme($tk-cms-font-size-px));
+
+  h1, h2, h3, h4, h5, h6 {
+    color: theme($tk-cms-heading-color);
+    font-family: theme($tk-cms-heading-font-stack);
+  }
+  h1 { font-size: rem(theme($tk-cms-h1-font-size-px)); }
+  h2 { font-size: rem(theme($tk-cms-h2-font-size-px)); }
+  h3 { font-size: rem(theme($tk-cms-h3-font-size-px)); }
+  h4 { font-size: rem(theme($tk-cms-h4-font-size-px)); }
+  h5 { font-size: rem(theme($tk-cms-h5-font-size-px)); }
+  h6 { font-size: rem(theme($tk-cms-h6-font-size-px)); }
+
+  &,
+  .o-grid-equal-cols__cell {
+    > h1, > h2, > h3, > h4, > h5, > h6, > p {
+      &:not(.u-keep-margin):first-child {
+        margin-top: 0;
+      }
+      &:not(.u-keep-margin):last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  p {
+    margin: 1em 0;
+  }
+}

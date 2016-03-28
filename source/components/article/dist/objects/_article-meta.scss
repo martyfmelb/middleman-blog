@@ -1,0 +1,8 @@
+.o-article-meta {
+  &__author,
+  &__last-updated {
+    color: theme($tk-base-color-light);
+    font-size: rem(theme($tk-cms-font-size-px));
+    font-style: italic;
+  }
+}

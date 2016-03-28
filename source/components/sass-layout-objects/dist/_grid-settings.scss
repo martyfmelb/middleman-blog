@@ -1,0 +1,61 @@
+// Neat variables
+$grid-columns: 12 !global;
+$gutter: 1em !global;
+$max-width: rem(1240px) !global;
+$border-box-sizing: true !global; // this is the default, but it should be explicit
+
+// Media queries based on metrics from: http://www.canbike.org/CSSpixels/
+//
+// These media queries are intended to generally attempt to capture "typical"
+// device classes.
+//
+// Any wiggle-room beyond this was tweaked to comfortably fit
+// the responsive automatic columns test page:
+// /components/sass-layout-objects/test/grid-equal-cols/auto/
+
+// Phone portrait (320 iP4+iP5, 360 SgS, 375 iP6, 414 iP6+)
+$mq-xsmall-max-width-px: 479px;
+
+// Mainly phone landscape (480 iP4, 568 iP5, 600 Nexus7 PORT, 640 SgS, 667 iP6)
+$mq-small-min-width-px: 480px;
+$mq-small-max-width-px: 667px;
+
+// Mainly tablet portrait (720 SurfacePro2, 736 iP6+ LAND, 768 iPad, 800 SgTab)
+$mq-medium-min-width-px: 668px;
+$mq-medium-max-width-px: 959px;
+
+// Tablet landscape (960 Nexus7, 1024 iPad, 1280 SgTab)
+$mq-large-min-width-px: 960px;
+$mq-large-max-width-px: 1280px;
+
+// Laptops, desktops (1366 cheap lappy, 1440 MBP/SurfacePro3, 1920 desk)
+$mq-xlarge-min-width-px: 1281px;
+
+$neat-breakpoint-xsmall-or-below: new-breakpoint(max-width $mq-xsmall-max-width-px);
+$neat-breakpoint-small-only:      new-breakpoint(min-width $mq-small-min-width-px  max-width $mq-small-max-width-px);
+$neat-breakpoint-medium-only:     new-breakpoint(min-width $mq-medium-min-width-px max-width $mq-medium-max-width-px);
+$neat-breakpoint-large-only:      new-breakpoint(min-width $mq-large-min-width-px  max-width $mq-large-max-width-px);
+$neat-breakpoint-xlarge-or-above: new-breakpoint(min-width $mq-xlarge-min-width-px);
+
+$neat-breakpoint-small-or-below:  new-breakpoint(max-width $mq-small-max-width-px);
+$neat-breakpoint-medium-or-below: new-breakpoint(max-width $mq-medium-max-width-px);
+$neat-breakpoint-large-or-below:  new-breakpoint(max-width $mq-large-max-width-px);
+
+$neat-breakpoint-small-or-above:  new-breakpoint(min-width $mq-small-min-width-px);
+$neat-breakpoint-medium-or-above: new-breakpoint(min-width $mq-medium-min-width-px);
+$neat-breakpoint-large-or-above:  new-breakpoint(min-width $mq-large-min-width-px);
+
+$neat-breakpoint-to-css-class-suffix-map: (
+  false: '', // convenience element so @each loops can easily cover "no media-query" cases
+  $neat-breakpoint-xsmall-or-below: '-for-xsmall-or-below',
+  $neat-breakpoint-small-only:      '-for-small',
+  $neat-breakpoint-medium-only:     '-for-medium',
+  $neat-breakpoint-large-only:      '-for-large',
+  $neat-breakpoint-xlarge-or-above: '-for-xlarge-or-above',
+  $neat-breakpoint-small-or-above:  '-for-small-or-above',
+  $neat-breakpoint-medium-or-above: '-for-medium-or-above',
+  $neat-breakpoint-large-or-above:  '-for-large-or-above',
+  $neat-breakpoint-small-or-below:  '-for-small-or-below',
+  $neat-breakpoint-medium-or-below: '-for-medium-or-below',
+  $neat-breakpoint-large-or-below:  '-for-large-or-below'
+);

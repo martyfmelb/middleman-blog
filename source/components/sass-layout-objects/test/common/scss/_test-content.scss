@@ -1,0 +1,42 @@
+.s-cms {
+  h1, h2, h3, h4, h5, h6, p {
+    &:first-child { margin-top: 0; }
+    &:last-child  { margin-bottom: 0; }
+  }
+  font-size: rem(12px);
+}
+code {
+  color: #000080;
+  font-weight: bold;
+  font-family: $helvetica;
+}
+.o-test-container {
+  border: 1px dotted #000000;
+  padding: 10px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1) inset;
+  &:before {
+    content: 'container';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: rem(8px);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.25);
+    margin-top: -9px;
+    margin-left: -9px;
+  }
+}
+.o-test-content {
+  border: 1px dotted #000000;
+  padding: 10px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1) inset;
+  &:before {
+    content: 'content';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: rem(8px);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.25);
+    margin-top: -9px;
+    margin-left: -9px;
+  }
+}

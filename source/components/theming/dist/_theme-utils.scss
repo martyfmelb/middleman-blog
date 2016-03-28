@@ -1,0 +1,35 @@
+// Theme keys
+$tk-root-font-size-px: unique-id();
+$tk-base-font-size-px: unique-id();
+$tk-base-font-stack: unique-id();
+
+$tk-base-background: unique-id();
+$tk-base-color: unique-id();
+$tk-base-color-light: unique-id();
+$tk-base-color-lighter: unique-id();
+$tk-base-color-lightest: unique-id();
+$tk-accent-primary-color: unique-id();
+$tk-accent-secondary-color: unique-id();
+
+$tk-cms-heading-font-stack: unique-id();
+$tk-cms-heading-color: unique-id();
+
+$tk-cms-font-stack: unique-id();
+$tk-cms-font-size-px: unique-id();
+$tk-cms-font-size-small-px: unique-id();
+$tk-cms-h1-font-size-px: unique-id();
+$tk-cms-h2-font-size-px: unique-id();
+$tk-cms-h3-font-size-px: unique-id();
+$tk-cms-h4-font-size-px: unique-id();
+$tk-cms-h5-font-size-px: unique-id();
+$tk-cms-h6-font-size-px: unique-id();
+
+@function theme($key, $theme: $current-theme) {
+  @return map-get($theme, $key);
+}
+@mixin set-current-theme($theme) {
+  $current-theme: $theme !global;
+
+  $em-base: theme($tk-root-font-size-px, $theme) !global;
+  // Maybe more connectors for Bitters variables
+}

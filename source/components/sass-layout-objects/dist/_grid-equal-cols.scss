@@ -1,0 +1,36 @@
+@mixin o-grid-equal-cols-media($breakpoint, $args...) {
+  @if not $breakpoint {
+    @content;
+  } @else {
+    @include media($breakpoint, $args...) {
+      @content;
+    }
+  }
+}
+
+.o-grid-equal-cols {
+  @include row;
+
+  @each $neat-breakpoint, $css-class-suffix in $neat-breakpoint-to-css-class-suffix-map {
+    @include o-grid-equal-cols-media($neat-breakpoint) {
+      @for $i from 1 through 6 {
+        &--#{$i}-cols#{$css-class-suffix} &__cell {
+          @include span-columns($grid-columns / $i);
+          @include omega(#{$i}n);
+        }
+      }
+      @for $i from 1 through 6 {
+        &--auto-cols#{$css-class-suffix} &__cell:first-child:nth-last-child(#{$i}),
+        &--auto-cols#{$css-class-suffix} &__cell:first-child:nth-last-child(#{$i}) ~ &__cell {
+          @include span-columns($grid-columns / $i);
+        }
+      }
+      &--with-row-gutters#{$css-class-suffix} {
+        margin-bottom: (- $gutter);
+      }
+      &--with-row-gutters#{$css-class-suffix} &__cell {
+        margin-bottom: $gutter;
+      }
+    }
+  }
+}

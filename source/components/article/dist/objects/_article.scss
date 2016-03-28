@@ -1,0 +1,14 @@
+.o-article {
+  border: 10px solid theme($tk-base-color-lightest);
+  border-left: 0;
+  border-right: 0;
+  padding: rem(30px) 0;
+  &__heading {
+    margin: 0;
+    font-size: rem(theme($tk-cms-h1-font-size-px));
+  }
+  &__heading + *,
+  &__meta + * {
+    margin-top: rem(theme($tk-cms-font-size-px));
+  }
+}
