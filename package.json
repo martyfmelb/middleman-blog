@@ -1,0 +1,23 @@
+{
+  "name": "middleman-blog",
+  "version": "0.0.1",
+  "description": "Middleman-based blog with emphasis on architecture that works at scale",
+  "main": "index.js",
+  "dependencies": {
+    "bourbon-neat": "^1.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martyfmelb/middleman-blog.git"
+  },
+  "author": "Martin Funcich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martyfmelb/middleman-blog/issues"
+  },
+  "homepage": "https://github.com/martyfmelb/middleman-blog#readme"
+}
