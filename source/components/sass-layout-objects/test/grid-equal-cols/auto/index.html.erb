@@ -6,6 +6,8 @@ css:
 ---
 <h1><code>o-grid-equal-cols--auto-cols</code> (automatic column count)</h1>
 <p>Columns automatically fit to one row.</p>
+<p>Like Neat, by default these grid objects have column gutters turned on
+  and row gutters turned off.</p>
 <p><code>--with-row-gutters</code> is set for all of these test grids.</p>
 <p>To see the effect of this, view this page in a smaller browser window and
   note how when the columns snap back to being rows, those rows have spacing
@@ -14,6 +16,8 @@ css:
   be of a guaranteed pixel or REM size. Neat somehow fudges horizontal gutter
   metrics into percentages of the parent sizing context's width, so
   unfortunately <code>$gutter: 1em !global;</code> acts as a guide only.</p>
+<p><code>--without-col-gutters</code> is only set for one test grid (3
+  columns).</p>
 
 
 
@@ -39,9 +43,11 @@ css:
 
 
 <h3>3 columns</h3>
+<h4><code>--without-col-gutters</code></h4>
 <div class="o-test-container">
   <div class="o-grid-equal-cols
               o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--without-col-gutters
               o-grid-equal-cols--auto-cols-for-small-or-above">
     <div class="o-grid-equal-cols__cell">
       <div class="o-test-content s-cms">

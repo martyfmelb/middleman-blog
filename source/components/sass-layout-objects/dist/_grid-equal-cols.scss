@@ -11,24 +11,56 @@
 .o-grid-equal-cols {
   @include row;
 
-  @each $neat-breakpoint, $css-class-suffix in $neat-breakpoint-to-css-class-suffix-map {
+  @each $neat-breakpoint, $breakpoint-css-class-suffix in $neat-breakpoint-to-css-class-suffix-map {
     @include o-grid-equal-cols-media($neat-breakpoint) {
-      @for $i from 1 through 6 {
-        &--#{$i}-cols#{$css-class-suffix} &__cell {
-          @include span-columns($grid-columns / $i);
-          @include omega(#{$i}n);
+
+      // Temporarily override gutters -- we're iterating over
+      // $col-gutter-to-col-gutter-selector-suffix-map so we have a choice of
+      // gutters or no gutters, something Neat doesn't normally support
+      //
+      $old-fg-gutter: $fg-gutter;
+      $col-gutter-to-col-gutter-selector-suffix-map: (
+        0 * $old-fg-gutter: '.o-grid-equal-cols--without-col-gutters',
+        1 * $old-fg-gutter: ''
+      );
+      @each $col-gutter, $col-gutter-selector-suffix in $col-gutter-to-col-gutter-selector-suffix-map {
+        $fg-gutter: $col-gutter !global;
+
+        // Explicit column count -- supports multiple rows
+        @for $i from 1 through 6 {
+          &--#{$i}-cols#{$breakpoint-css-class-suffix}#{$col-gutter-selector-suffix} &__cell {
+            @include span-columns($grid-columns / $i);
+            @include omega(#{$i}n);
+
+            // Because span-columns isn't normally used for 2d grids, columns
+            // on rows after the first might "catch" on long columns in the
+            // previous row.
+            //
+            // To prevent this, we clear every (N+1)th columns so they always
+            // begin on a new row.
+            //
+            &:nth-child(#{$i}n + 1) { clear: both; }
+          }
+        }
+
+        // Implicit column count -- does not explicitly support multiple rows
+        // but if you go more than 6 columns you will end up with them :-S
+        @for $i from 1 through 6 {
+          &--auto-cols#{$breakpoint-css-class-suffix}#{$col-gutter-selector-suffix} &__cell:first-child:nth-last-child(#{$i}),
+          &--auto-cols#{$breakpoint-css-class-suffix}#{$col-gutter-selector-suffix} &__cell:first-child:nth-last-child(#{$i}) ~ &__cell {
+            @include span-columns($grid-columns / $i);
+            &:nth-child(#{$i}n + 1) { clear: both; }
+          }
         }
       }
-      @for $i from 1 through 6 {
-        &--auto-cols#{$css-class-suffix} &__cell:first-child:nth-last-child(#{$i}),
-        &--auto-cols#{$css-class-suffix} &__cell:first-child:nth-last-child(#{$i}) ~ &__cell {
-          @include span-columns($grid-columns / $i);
-        }
-      }
-      &--with-row-gutters#{$css-class-suffix} {
+      $fg-gutter: $old-fg-gutter !global;
+
+      // Neat doesn't support row gutters so we have to add the option for
+      // those too
+      &--with-row-gutters#{$breakpoint-css-class-suffix} {
         margin-bottom: (- $gutter);
       }
-      &--with-row-gutters#{$css-class-suffix} &__cell {
+      &--with-row-gutters#{$breakpoint-css-class-suffix} &__cell {
         margin-bottom: $gutter;
       }
     }

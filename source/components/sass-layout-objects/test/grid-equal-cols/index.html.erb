@@ -6,7 +6,12 @@ css:
 ---
 <h1><code>o-grid-equal-cols--N-cols</code> (fixed column count)</h1>
 <p>Column count is set manually, to allow multiple rows without extra containers.</p>
+<p>Like Neat, by default these grid objects have column gutters turned on
+  and row gutters turned off.</p>
 <p><code>--with-row-gutters</code> is set for all of these test grids.</p>
+<p><code>--without-col-gutters</code> is only set for one test grid (3
+  columns).</p>
+
 
 
 <h2><code>--N-cols-for-[media]</code></h2>
@@ -107,9 +112,11 @@ css:
 
 
 <h3><code>--3-cols-for-small-or-above</code></h3>
+<h4><code>--without-col-gutters</code></h4>
 <div class="o-test-container">
   <div class="o-grid-equal-cols
               o-grid-equal-cols--with-row-gutters
+              o-grid-equal-cols--without-col-gutters
               o-grid-equal-cols--3-cols-for-small-or-above">
     <div class="o-grid-equal-cols__cell">
       <div class="o-test-content s-cms">
