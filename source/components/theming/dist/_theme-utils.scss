@@ -10,6 +10,7 @@ $tk-base-color-lighter: unique-id();
 $tk-base-color-lightest: unique-id();
 $tk-accent-primary-color: unique-id();
 $tk-accent-secondary-color: unique-id();
+$tk-action-color: unique-id();
 
 $tk-cms-heading-font-stack: unique-id();
 $tk-cms-heading-color: unique-id();
@@ -32,4 +33,12 @@ $tk-cms-h6-font-size-px: unique-id();
 
   $em-base: theme($tk-root-font-size-px, $theme) !global;
   // Maybe more connectors for Bitters variables
+
+  @include set-article-theme((
+    $tk-article-heading-font-size-px: theme($tk-cms-h1-font-size-px),
+    $tk-article-border-color: theme($tk-base-color-lightest),
+    $tk-article-section-spacing-px: theme($tk-base-font-size-px),
+    $tk-article-meta-color: theme($tk-base-color-light),
+    $tk-article-meta-font-size-px: theme($tk-cms-font-size-px)
+  ));
 }

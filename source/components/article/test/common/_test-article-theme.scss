@@ -1,0 +1,8 @@
+$test-article-theme: (
+  $tk-article-heading-font-size-px: 36px,
+  $tk-article-border-color: #CCCCCC,
+  $tk-article-section-spacing-px: 12px,
+  $tk-article-meta-color: #808080,
+  $tk-article-meta-font-size-px: 14px
+);
+@include set-article-theme($test-article-theme);

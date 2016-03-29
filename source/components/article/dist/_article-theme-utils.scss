@@ -1,0 +1,16 @@
+// Theme keys
+
+$tk-article-heading-font-size-px: unique-id();
+$tk-article-border-color: unique-id();
+$tk-article-section-spacing-px: unique-id();
+
+$tk-article-meta-color: unique-id();
+$tk-article-meta-font-size-px: unique-id();
+
+@function article-theme($key, $article-theme: $article-current-theme) {
+  @return map-get($article-theme, $key);
+}
+
+@mixin set-article-theme($article-theme) {
+  $article-current-theme: $article-theme !global;
+}

@@ -8,6 +8,10 @@ body {
   color: theme($tk-base-color);
 }
 
+a {
+  color: theme($tk-action-color);
+}
+
 .u-padded-sides {
   padding-left: 15px;
   padding-right: 15px;

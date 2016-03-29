@@ -1,0 +1,50 @@
+---
+layout: component-test
+title: c-article - Article Components
+css:
+- test.css
+---
+<h1><code>c-article</code></h1>
+
+
+
+<h2>Actual appearance (including c-article-meta inlined)</h2>
+<div class="c-article">
+  <div class="u-padded-sides">
+    <h1 class="c-article__heading">Article heading is an H1</h1>
+    <div class="c-article__meta">
+      <div class="c-article-meta">
+        <div class="c-article-meta__author">Martin Funcich</div>
+        <div class="c-article-meta__last-updated">March 28, 2016 11:28 PM</div>
+      </div>
+    </div>
+    <div class="c-article__content">
+      <div class="s-cms">
+        <%= partial "../../../test-common/partials/latin-paragraphs" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2>Containers visible</h2>
+<div class="o-test-container">
+  <div class="c-article">
+    <div class="u-padded-sides">
+      <h1 class="c-article__heading">Article heading is an H1</h1>
+      <div class="c-article__meta">
+        <div class="o-test-content">
+          c-article-meta would go here
+        </div>
+      </div>
+      <div class="c-article__content">
+        <div class="o-test-content">
+          <div class="s-cms">
+            <%= partial "../../../test-common/partials/latin-paragraphs" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

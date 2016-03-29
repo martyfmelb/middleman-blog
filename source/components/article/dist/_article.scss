@@ -1,0 +1,14 @@
+.c-article {
+  border: 10px solid article-theme($tk-article-border-color);
+  border-left: 0;
+  border-right: 0;
+  padding: rem(30px) 0;
+  &__heading {
+    margin: 0;
+    font-size: rem(article-theme($tk-article-heading-font-size-px));
+  }
+  &__heading + *,
+  &__meta + * {
+    margin-top: rem(article-theme($tk-article-section-spacing-px));
+  }
+}

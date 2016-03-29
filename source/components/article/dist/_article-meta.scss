@@ -1,0 +1,8 @@
+.c-article-meta {
+  &__author,
+  &__last-updated {
+    color: article-theme($tk-article-meta-color);
+    font-size: rem(article-theme($tk-article-meta-font-size-px));
+    font-style: italic;
+  }
+}

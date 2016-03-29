@@ -8,7 +8,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <%= stylesheet_link_tag 'bundles/site.css' %>
+    <% css_theme = current_page.data.css_theme || 'default' %>
+    <%= stylesheet_link_tag 'bundles/site/' + css_theme + '.css' %>
 
     <% current_page.data.css && current_page.data.css.each do |css| %>
       <%= stylesheet_link_tag css %>
@@ -34,7 +35,9 @@
         </div>
       </div>
       <div class="c-page__footer">
-        Copyright &copy; 2016 Defensive Entity. All rights reserved.
+        <div class="o-outer-container">
+          Copyright &copy; 2016 Defensive Entity. All rights reserved.
+        </div>
       </div>
     </div>
     <% current_page.data.js && current_page.data.js.each do |js| %>
