@@ -1,0 +1,29 @@
+.c-page {
+
+  // Sticky footer technique shamelessly ripped from:
+  // http://codepen.io/paulobrien/pen/FKAxH
+  //
+  // Note: immediate parent must have a fixed height for this to work. In
+  // practice, this means <html> and <body> height must be set to 100%.
+  //
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  &__header,
+  &__body,
+  &__footer {
+    display: table-row;
+  }
+
+  &__header,
+  &__footer {
+    height: 1px;
+  }
+  // end of sticky footer
+
+  &__header + &__body,
+  &__body + &__footer {
+    margin-top: 10px;
+  }
+}

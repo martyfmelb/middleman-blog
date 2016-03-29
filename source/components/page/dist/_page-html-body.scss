@@ -1,0 +1,6 @@
+// Just making it explicit that o-page-height-body-footer depends on CSS
+// applied outside the object itself.
+html,
+body {
+  height: 100%;
+}

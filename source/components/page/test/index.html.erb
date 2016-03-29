@@ -1,0 +1,39 @@
+---
+layout: component-test
+title: c-page - SASS Layout Objects
+css:
+- test.css
+---
+<div class="o-test-container" style="height: 100%;">
+  <div class="c-page">
+    <header class="c-page__header">
+      <div class="o-test-content s-cms">
+        This is the header area
+      </div>
+    </header>
+    <main class="c-page__body">
+      <div class="o-test-content s-cms">
+        <p>Page header-body-footer's job is to:</p>
+        <ul>
+          <li>Ensure spacing between header, body, and footer areas of a
+            page</li>
+          <li>Apply the "sticky footer" technique so there is never space
+            between the page footer and the bottom of the browser window.</li>
+        </ul>
+        <p>Sticky footer requires the immediate container to have a fixed
+          height, which in this case, is the <code>&lt;body&gt;</code>
+          element.</p>
+        <p>Of note, the visible "content" box in this example does not
+          represent the <code>__body</code> height, but rather, the height of
+          the content within <code>__body</code>.</p>
+        <%= partial "../../test-common/partials/latin-paragraphs" %>
+        <%= partial "../../test-common/partials/latin-paragraph" %>
+      </div>
+    </main>
+    <footer class="c-page__footer">
+      <div class="o-test-content s-cms">
+        This is the footer area
+      </div>
+    </footer>
+  </div>
+</div>

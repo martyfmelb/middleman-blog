@@ -22,11 +22,25 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <div class="o-outer-container">
-      <%= yield %>
+    <div class="c-page">
+      <div class="c-page__header">
+        <div class="o-outer-container">
+          Header
+        </div>
+      </div>
+      <div class="c-page__body">
+        <div class="o-outer-container">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="c-page__footer">
+        Copyright &copy; 2016 Defensive Entity. All rights reserved.
+      </div>
     </div>
     <% current_page.data.js && current_page.data.js.each do |js| %>
-      <%= javascript_include_tag js %>
+      <div class="o-outer-container">
+        <%= javascript_include_tag js %>
+      </div>
     <% end %>
   </body>
 </html>
